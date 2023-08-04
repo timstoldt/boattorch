@@ -1,7 +1,6 @@
 import sqlite3
 
 conn = sqlite3.connect('database.db')
-print("Opened database successfully")
 
 # client info (boattorch, torchcabin, etc)
 conn.execute("""CREATE TABLE client (
@@ -37,5 +36,7 @@ conn.execute("""CREATE TABLE rentalObjects (
                 rateID INTEGER,
                 name TEXT
                 )""")
+
+print("Table created successfully")
 
 conn.close()
